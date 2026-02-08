@@ -1,6 +1,6 @@
 # Evaluating JPEG2000 Compression Effects on Lung Cancer WSI Segmentation
 
-This repository contains the **model architecture definitions** described in the manuscript: **"Evaluating JPEG2000 compression effects on prediction accuracy and storage efficiency in lung cancer whole-slide images: A deep learning–based analysis"**.
+This repository contains the **model architecture definitions** and **preprocessing utilities** described in the manuscript: **"Evaluating JPEG2000 compression effects on prediction accuracy and storage efficiency in lung cancer whole-slide images: A deep learning–based analysis"**.
 
 ## 📌 Project Overview
 We investigate the trade-off between storage efficiency and AI diagnostic accuracy by applying JPEG2000 compression to Whole Slide Images (WSIs). We compare the robustness of CNN-based models and Transformer-based models against compression artifacts.
@@ -13,6 +13,14 @@ The `models.py` file includes the definitions for the following models:
   - `ResNet-50 + U-Net`
 - **Transformer-based:**
   - `SegFormer (MiT-B1) + U-Net`
+
+## 📂 Repository Structure
+We provide not only the model definitions but also the utility scripts used for data preparation to ensure reproducibility.
+
+- **`models.py`**: Pytorch implementations of the models used in the study.
+- **`utils/`**:
+  - **`preprocessing_utils.py`**: Functions for filtering background tiles based on pixel intensity thresholds (White/Black ratio).
+  - **`compression_utils.py`**: Parameters and configurations used for JPEG2000 compression.
 
 ## 📨 Request for Training Code
 For academic integrity and reproducibility, the **full training scripts and detailed experimental setups** are available upon reasonable request.
